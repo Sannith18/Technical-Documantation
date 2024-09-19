@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Basics Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Java Basics Documentation</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#datatype">Data Types</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#oops">Object-Oriented Programming</a></li>
+                <li><a href="#threads">Threads</a></li>
+                <li><a href="#exceptions">Exception Handling</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#additional">Additional Topics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Java is a high-level, class-based, object-oriented programming language that is widely used for building enterprise-level applications. It is platform-independent, which means Java code can run on any device that has the Java Virtual Machine (JVM).</p>
+    </section>
+
+    <section id="datatype">
+        <h2>Data Types</h2>
+        <p>Java has two categories of data types: primitive types and reference types.</p>
+        <h3>Primitive Data Types</h3>
+        <ul>
+            <li><code>byte</code>: 8-bit integer</li>
+            <li><code>short</code>: 16-bit integer</li>
+            <li><code>int</code>: 32-bit integer</li>
+            <li><code>long</code>: 64-bit integer</li>
+            <li><code>float</code>: 32-bit floating point</li>
+            <li><code>double</code>: 64-bit floating point</li>
+            <li><code>char</code>: 16-bit Unicode character</li>
+            <li><code>boolean</code>: true or false</li>
+        </ul>
+
+        <h3>Reference Data Types</h3>
+        <p>Reference data types refer to objects, such as arrays, strings, or custom classes.</p>
+    </section>
+
+    <section id="strings">
+        <h2>Strings</h2>
+        <p>Strings in Java are immutable objects, meaning once a string is created, it cannot be changed. Java provides the <code>String</code> class for creating and manipulating strings.</p>
+        <pre><code>String greeting = "Hello, World!";
+int length = greeting.length();
+String upperCaseGreeting = greeting.toUpperCase();</code></pre>
+    </section>
+
+    <section id="oops">
+        <h2>Object-Oriented Programming (OOP)</h2>
+        <p>Java is an object-oriented language, and its key OOP concepts are:</p>
+        <ul>
+            <li><strong>Encapsulation</strong>: Bundling data (variables) and methods (functions) that operate on the data into a single unit, the class.</li>
+            <li><strong>Inheritance</strong>: Mechanism where one class inherits the fields and methods of another class.</li>
+            <li><strong>Polymorphism</strong>: Ability of different objects to respond to the same method in their own way.</li>
+            <li><strong>Abstraction</strong>: Hiding the internal details and showing only the essential features of an object.</li>
+        </ul>
+        <pre><code>// Example: Encapsulation
+class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}</code></pre>
+    </section>
+
+    <section id="threads">
+        <h2>Threads</h2>
+        <p>Java provides built-in support for multithreading, allowing concurrent execution of two or more parts of a program.</p>
+        <p>You can create a thread by either implementing the <code>Runnable</code> interface or extending the <code>Thread</code> class.</p>
+        <pre><code>// Example: Extending Thread class
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+MyThread t1 = new MyThread();
+t1.start();</code></pre>
+    </section>
+
+    <section id="exceptions">
+        <h2>Exception Handling</h2>
+        <p>Java provides a robust mechanism for handling runtime errors via <em>exceptions</em>. You can handle exceptions using <code>try</code>, <code>catch</code>, <code>finally</code>, and <code>throw</code> keywords.</p>
+        <pre><code>try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+} finally {
+    System.out.println("This block is always executed");
+}</code></pre>
+    </section>
+
+    <section id="collections">
+        <h2>Collections</h2>
+        <p>Java Collections Framework provides a set of classes and interfaces for storing and manipulating groups of data as a single unit.</p>
+        <ul>
+            <li><code>List</code>: Ordered collection, allows duplicates (e.g., <code>ArrayList</code>, <code>LinkedList</code>)</li>
+            <li><code>Set</code>: Unordered collection, no duplicates (e.g., <code>HashSet</code>, <code>TreeSet</code>)</li>
+            <li><code>Map</code>: Key-value pairs (e.g., <code>HashMap</code>, <code>TreeMap</code>)</li>
+        </ul>
+        <pre><code>// Example: Using ArrayList
+List<String> list = new ArrayList<>();
+list.add("Apple");
+list.add("Banana");
+System.out.println(list);</code></pre>
+    </section>
+
+    <section id="additional">
+        <h2>Additional Topics</h2>
+        <p>Some additional foundational topics in Java include:</p>
+        <ul>
+            <li><strong>Generics</strong>: Allows writing generic code to work with any data type, enhancing code reusability.</li>
+            <li><strong>Lambda Expressions</strong>: Used to provide implementation for functional interfaces in a concise way.</li>
+            <li><strong>Annotations</strong>: Metadata added to Java code to give additional information to the compiler.</li>
+            <li><strong>Streams</strong>: Helps in processing sequences of elements with functional programming constructs.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Java Basics Documentation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
